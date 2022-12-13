@@ -1,0 +1,175 @@
+/* ================================
+ POLICE
+ ================================ */
+@font-face {
+    font-family: futura-book;
+    src: url(./font/Futura-Book-Font/Futura_20Medium_20BT.ttf);
+}
+
+/* ================================
+ VARIABLES
+ ================================ */
+:root {
+    --font-name: futura-book;
+    --main-text-color: #feffff;
+    --border-color: #595e5e;
+    --background-color: #414449;
+    --font-size: 18px;
+}
+
+/* ================================
+ STYLE GENERAL 
+ ================================ */
+body {
+    background-color: var(--background-color);
+    font-size: var(--font-size);
+    color: var(--main-text-color);
+    font-family: var(--font-name);
+}
+
+h1 {
+    font-weight: 600;
+    color: var(--main-text-color);
+    border-bottom-style: solid;
+    border-bottom-color: var(--border-color);
+    padding: 15px 0px;
+}
+.title {
+    text-transform: uppercase;
+    text-align: center;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-bottom-color: var(--border-color);
+    border-top-color: var(--border-color);
+    margin: 0;
+}
+/* ================================
+MEDIA QUERIES
+ ================================ */
+@media (max-width: 576px) {
+    /* Grid armor */
+    .grid-armor {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Input stat */
+    .grid-armor .armor-part .all-stats-armor table tbody tr .input-stat {
+        height: auto !important;
+        width: 20% !important;
+    }
+
+    /* Nom stat */
+    .nom-stat {
+        padding-left: 5% !important;
+        width: 80% !important;
+    }
+
+    /* Nom stat */
+    .grid-armor tr .nom-stat {
+        padding-right: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        height: 30px;
+    }
+}
+
+/* ================================
+ GRILLE STAT 
+ ================================ */
+.grid-armor {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: stretch;
+    align-items: stretch;
+    column-gap: 26px;
+    row-gap: 20px;
+    margin:  0 2rem;
+}
+
+.all-stats-armor {
+    color: var(--main-text-color);
+    text-align: center;
+    padding: 15px;
+    text-transform: uppercase;
+}
+
+.armor-part-result {
+    display: grid;
+    justify-content: center;
+    gap: 4px;
+    align-content: center;
+    grid-auto-flow: column;
+}
+
+/* ================================
+ TABLEAU 
+ ================================ */
+table {
+    width: 100%;
+    border-spacing: 0px 10px;
+}
+
+
+td {
+    text-align: left;
+}
+
+td.nom-stat {
+    width: 40%;
+    padding: 0 20px;
+}
+.res {
+    width: 10%;
+    padding-right: 20px;
+}
+
+/* ================================
+ INPUT 
+ ================================ */
+input[type="number"] {
+    background-color: transparent;
+    border-style: none;
+    border-bottom-style: solid;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    text-align: center;
+    font-size: var(--font-size);
+    color: var(--main-text-color);
+}
+
+.input-stat {
+    width: 20%;
+}
+
+/* Permet de ne pas afficher les flèches des inputs */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    display: none;
+}
+
+/* Permet de cacher la hitbox de l'input quand elle est selectionnée */
+input:focus {
+    outline: none;
+}
+
+/* ================================
+BOUTON 
+ ================================ */
+button {
+    border: 3px solid var(--border-color);
+    border-radius: 10px;
+    font-size: var(--font-size);
+    line-height: 30px;
+    padding: 0px 15px;
+    margin-top: 10px;
+    background-color: transparent;
+    color: var(--main-text-color);
+    text-transform: uppercase;
+}
+
+button:hover {
+    border-color: var(--main-text-color);
+    background-color: var(--main-text-color);
+    color: var(--background-color);
+    transition: all 0.25s ease-in-out;
+}
