@@ -104,6 +104,20 @@ resetStatBtn.addEventListener("click", function () {
     torse.reset();
     jambieres.reset();
     objetClasse.reset();
+
+    progressMobilite.value = 0;
+    progressResistance.value = 0;
+    progressRecuperation.value = 0;
+    progressDiscipline.value = 0;
+    progressIntelligence.value = 0;
+    progressForce.value = 0;
+
+    mobiliteDOM.textContent = 0;
+    resistanceDOM.textContent = 0;
+    recuperationDOM.textContent = 0;
+    disciplineDOM.textContent = 0;
+    intelligenceDOM.textContent = 0;
+    forceDOM.textContent = 0;
 });
 /* ================================
 COMPORTEMENT PAGE
